@@ -22,10 +22,12 @@ TARGET_BOOTLOADER_BOARD_NAME := merlinx
 -include device/xiaomi/mt6768-common/BoardConfigCommon.mk
 
 # Kernel
+HAS_PREBUILT_KERNEL := true
+NEEDS_KERNEL_COPY := true
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
-TARGET_KERNEL_CONFIG := merlin_defconfig
+#TARGET_KERNEL_CONFIG := merlin_defconfig
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := merlin,merlinx,merlin_eea,merlinnfc
